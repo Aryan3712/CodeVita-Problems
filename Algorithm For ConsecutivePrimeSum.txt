@@ -23,9 +23,10 @@ Input       Output
 
 Algorithm>>>
 
-Step 1: we generate all the primes under the given limit and store them in any data 	structure
+Step 1: we generate all the primes under the given limit and store them in any data structure
 
-Step 2: we fetch the maximum prime number from the data structure and check if it can be 	obtained by adding the numbers of the Arraylist from the minimum prime number 2
+Step 2: we fetch the maximum prime number from the data structure and check if it can be obtained by adding the numbers of the Arraylist 
+	starting from the minimum prime number 2 present in the data Structure
 
 Step 3: if a number is obtained from the sum of primes(starting from 2+3+...)
 	we increase counter by 1 and  break the loop
