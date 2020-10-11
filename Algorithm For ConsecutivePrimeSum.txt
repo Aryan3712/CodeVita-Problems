@@ -2,6 +2,7 @@
 	Runtime for this Algorithm for a limit of 5000 numbers = 0.261 seconds
 
 		  >>>Consecutive Prime Sum - TCS CodeVita Problem<<<
+		  Solved by Aryan Walia
 
 Some prime numbers can be expressed as a sum of other consecutive prime numbers. 
 For example 5 = 2 + 3, 17 = 2 + 3 + 5 + 7, 41 = 2 + 3 + 5 + 7 + 11 + 13. 
