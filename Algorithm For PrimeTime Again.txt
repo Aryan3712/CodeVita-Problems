@@ -1,71 +1,67 @@
-Prime Time Again
-Solved By Aryan Walia
+						                                                  >>>Prime Time Again<<<
+                                                               Solved By Aryan Walia
 Here on earth, our 24-hour day is composed of two parts, each of 12 hours. Each hour in each part has a corresponding hour in the other part separated by 12 hours: the hour essentially measures the duration since the start of the day part. For example, 1 hour in the first part of the day is equivalent to 13, which is 1 hour into the second part of the day.
-
 Now, consider the equivalent hours that are both prime numbers. We have 3 such instances for a 24-hour 2-part day:
-
 5~17
-
 7~19
-
 11~23
-
-
-
 Accept two natural numbers D, P >1 corresponding respectively to number of hours per day and number of parts in a day separated by a space. D should be divisible by P, meaning that the number of hours per part (D/P) should be a natural number. Calculate the number of instances of equivalent prime hours. Output zero if there is no such instance. Note that we require each equivalent hour in each part in a day to be a prime number.
 
-
-
 Example:
-
 Input: 24 2
-
 Output: 3 (We have 3 instances of equivalent prime hours: 5~17, 7~19 and 11~23.)
-
 Constraints
-
 10 <= D < 500
-
 2 <= P < 50
-
-
-
 Input
-
 Single line consists of two space separated integers, D and P corresponding to number of. hours per day and number of parts in a day respectively
-
 Output
-
 Output must be a single number, corresponding to the number of instances of equivalent prime number, as described above
-
-
-
 Example 1
-
 Input
-
 36 3
-
 Output
-
 2
-
-
-
 Explanation
-
 In the given test case D = 36 and P = 3
-
 Duration of each day part = 12
-
 2~14~X
-
 3~15~X
-
 5~17~29 - instance of equivalent prime hours
-
 7~19~31 - instance of equivalent prime hours
-
 11~23~X
-
 Hence the answers is 2.
+
+				     >>>Algorithm for the Solution Of PrimeTime Again<<<
+
+Step 1: check if D is divisible by P, then 
+Step 2: create a multi-dimensional array having 
+	rows = D/P
+	cols = P
+Step 3: and add numbers from 1 to D in such a way that 
+ 	all the instances of equivalent hours of a day exist in one column
+	for ex: for D = 24 and P = 2
+	1  13	
+	2  14
+	3  15
+	4  16
+	5  17
+	6  18		as it is seen that in 5th row both the numbers(5 and 17)are prime
+	7  19
+	8  20
+	9  21
+       10  22
+       11  23
+       12  24
+Step 4: start from 2nd row(since 1 is not prime) and check if the 
+	number in the next column is also prime (increment the counter by 1 if prime) 
+	i.e (for 2nd row check that both 2 and 14 should be prime)
+	if all the numbers in the row are prime then
+Step 5: check that the counter of primes in a row should be equal to the value of P (or col) 
+	if yes, then take one more counter and increment it by 1 and stop the iteration;
+
+Step 6: update the prime counter to 0 for every new row (i.e in every row prime counter should be equal to P)
+
+Step 7: when the iteration finishes,return or print the value of second counter (i.e how many times the prime counter was 	equal to P)
+
+>> look at the code for final understanding <<
